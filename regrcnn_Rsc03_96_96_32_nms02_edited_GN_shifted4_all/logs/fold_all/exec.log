@@ -1,0 +1,1310 @@
+Logging system metrics without superior process priority.
+loaded model from /cis/home/zchen163/my_documents/RegRCNN/models/mrcnn.py
+Logging system metrics without superior process priority.
+loaded model from /cis/home/zchen163/my_documents/RegRCNN/models/mrcnn.py
+Logging system metrics without superior process priority.
+loaded model from /cis/home/zchen163/my_documents/RegRCNN/models/mrcnn.py
+Logging system metrics without superior process priority.
+loaded model from /cis/home/zchen163/my_documents/RegRCNN/models/mrcnn.py
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+data set loaded with: 810 train / 405 val / 406 test patients
+subset: selected 406 instances from df
+data set loaded with: 406 test patients
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/zchen163/my_documents/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init
+Logging system metrics without superior process priority.
+loaded backbone from /cis/home/gcoste1/MaskReg/MaskRegInference/RegRCNN/models/backbone.py
+anchor scales {'xy': [[2], [4], [8]], 'z': [[2], [4], [8]]} and feature map shapes [[24 24 32]
+ [12 12 16]
+ [ 6  6  8]
+ [ 3  3  4]]
+level 0: expected anchors 55296, built anchors (55296, 6).
+level 1: expected anchors 6912, built anchors (6912, 6).
+level 2: expected anchors 864, built anchors (864, 6).
+Total: expected anchors 63072, built anchors (63072, 6).
+using default pytorch weight init

@@ -1,0 +1,11 @@
+
+****************************
+
+results for fold 0, 30/10/23 14:09:26 
+
+****************************
+
+fold df shape (97136, 8)
+  
+ap 0.669  auc nan  fold_0 rois Synapse 
+ap 0.669  auc nan  fold_0 rois class_means 
