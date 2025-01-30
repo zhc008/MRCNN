@@ -20,3 +20,9 @@ cd /your_dir_to_RegRCNN/RegRCNN/
 source pyenv/bin/activate
 python setup.py install
 ```
+## Test case
+Run inference on a small 96x96x32 image in folder RSC02_roi3_GC
+```
+python evaluate_inference_analysis_masks_small.py
+```
+inference result will be under the RSC02_roi3_GC folder
