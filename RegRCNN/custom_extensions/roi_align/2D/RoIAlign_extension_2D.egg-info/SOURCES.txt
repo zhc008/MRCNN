@@ -1,0 +1,7 @@
+setup.py
+/cis/home/zchen163/my_documents/RegRCNN/custom_extensions/roi_align/2D/src/RoIAlign_cuda.cu
+/cis/home/zchen163/my_documents/RegRCNN/custom_extensions/roi_align/2D/src/RoIAlign_interface.cpp
+RoIAlign_extension_2D.egg-info/PKG-INFO
+RoIAlign_extension_2D.egg-info/SOURCES.txt
+RoIAlign_extension_2D.egg-info/dependency_links.txt
+RoIAlign_extension_2D.egg-info/top_level.txt

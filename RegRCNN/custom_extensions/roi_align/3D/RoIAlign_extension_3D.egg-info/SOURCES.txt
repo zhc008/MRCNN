@@ -1,0 +1,7 @@
+setup.py
+/cis/home/zchen163/my_documents/RegRCNN/custom_extensions/roi_align/3D/src/RoIAlign_cuda_3d.cu
+/cis/home/zchen163/my_documents/RegRCNN/custom_extensions/roi_align/3D/src/RoIAlign_interface_3d.cpp
+RoIAlign_extension_3D.egg-info/PKG-INFO
+RoIAlign_extension_3D.egg-info/SOURCES.txt
+RoIAlign_extension_3D.egg-info/dependency_links.txt
+RoIAlign_extension_3D.egg-info/top_level.txt

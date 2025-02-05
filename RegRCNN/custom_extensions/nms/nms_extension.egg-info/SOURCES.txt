@@ -1,0 +1,9 @@
+setup.py
+/cis/home/zchen163/my_documents/RegRCNN/custom_extensions/nms/src/nms.cu
+/cis/home/zchen163/my_documents/RegRCNN/custom_extensions/nms/src/nms_interface.cpp
+nms_extension.egg-info/PKG-INFO
+nms_extension.egg-info/SOURCES.txt
+nms_extension.egg-info/dependency_links.txt
+nms_extension.egg-info/top_level.txt
+src/nms.cu
+src/nms_interface.cpp
