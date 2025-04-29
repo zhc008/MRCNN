@@ -40,20 +40,12 @@ class Configs(DefaultConfigs):
         self.test_against_exact_gt = True
         self.plot_bg_chan = 0
         self.root_dir = '/cis/home/zchen163/my_documents'
-        self.raw_data_dir = '{}/XTC_data/Rsc03_training_128_128_48/raw'.format(self.root_dir)
-        self.label_data_dir = '{}/XTC_data/Rsc03_training_128_128_48/label'.format(self.root_dir)
-        # self.edited_label_data_dir = '{}/XTC_data/ilastik_MaskReg_96_96_32_50/edited_label_shifted4_all'.format(self.root_dir)
-        # self.augment_label_dir = '{}/XTC_data/ilastik_MaskReg_96_96_32_50/edited_label_augment'.format(self.root_dir)
-        # self.augment_raw_dir = '{}/XTC_data/ilastik_MaskReg_96_96_32_50/raw_augment'.format(self.root_dir)
-        # self.blacken_label_dir = '{}/XTC_data/ilastik_MaskReg_96_96_32_50/edited_label_blacken'.format(self.root_dir)
-        # self.blacken_raw_dir = '{}/XTC_data/ilastik_MaskReg_96_96_32_50/raw_blacken'.format(self.root_dir)
-        # self.pp_dir = '{}/XTC_data/ilastik_MaskReg_96_96_32_50_edited_npy'.format(self.root_dir)
-        
-        self.pp_dir = '{}/XTC_data/Rsc03_training_128_128_48_npy'.format(self.root_dir)
-        self.before_crop_dir = '{}/XTC_data/Rsc03_training/'.format(self.root_dir) ## line added here for easier preprocessing 
-        # # 'merged' for one gt per image, 'single_annotator' for four gts per image.
-        # self.gts_to_produce = ["single_annotator", "merged"]
+        self.raw_data_dir = '{}/XTC_data/Rsc03_training_96_96_32/raw'.format(self.root_dir)
+        self.label_data_dir = '{}/XTC_data/Rsc03_training_96_96_32/label'.format(self.root_dir)
 
+        
+        self.pp_dir = '{}/XTC_data/Rsc03_training_96_96_32_npy'.format(self.root_dir)
+        self.before_crop_dir = '{}/XTC_data/Rsc03_training/'.format(self.root_dir) ## line added here for easier preprocessing 
         self.target_spacing = (0.7, 0.7, 1.25)
 
         #########################
@@ -61,13 +53,10 @@ class Configs(DefaultConfigs):
         #########################
 
         # path to preprocessed data.
-        # self.pp_name = 'ilastik_MaskReg_96_96_32_50_edited_npy'
-        self.pp_name = 'Rsc03_training_128_128_48_npy'
+        self.pp_name = 'Rsc03_training_96_96_32_npy'
 
-        # self.input_df_name = 'info_df.pickle'
         self.info_df_name = 'info_df.pickle'
         self.data_sourcedir = '/cis/home/zchen163/my_documents/XTC_data/{}/'.format(self.pp_name)
-        #self.data_sourcedir = '/home/gregor/networkdrives/E132-Cluster-Projects/lidc/data/{}/'.format(self.pp_name)
 
         # settings for deployment on cluster.
         if server_env:
@@ -122,18 +111,9 @@ class Configs(DefaultConfigs):
         # patch_size to be used for training. pre_crop_size is the patch_size before data augmentation.
         self.pre_crop_size_2D = [320, 320]
         self.patch_size_2D = [320, 320]
-        # self.pre_crop_size_3D = [96, 96, 32]
-        # self.patch_size_3D = [96, 96, 32]
-        self.pre_crop_size_3D = [128, 128, 48]
-        self.patch_size_3D = [128, 128, 48]
-        # self.pre_crop_size_3D = [64, 64, 48]
-        # self.patch_size_3D = [64, 64, 48]
-        # self.pre_crop_size_3D = [64, 64, 32]
-        # self.patch_size_3D = [64, 64, 32]
-        # self.pre_crop_size_3D = [64, 64, 16]
-        # self.patch_size_3D = [64, 64, 16]
-        # self.pre_crop_size_3D = [32, 32, 32]
-        # self.patch_size_3D = [32, 32, 32]
+        self.pre_crop_size_3D = [96, 96, 32]
+        self.patch_size_3D = [96, 96, 32]
+
 
         self.patch_size = self.patch_size_2D if self.dim == 2 else self.patch_size_3D
         self.pre_crop_size = self.pre_crop_size_2D if self.dim == 2 else self.pre_crop_size_3D
@@ -162,9 +142,6 @@ class Configs(DefaultConfigs):
         #                        Label(4, 'MS4',  (*self.bright_red, 1.), (4,)),
         #                        Label(5, 'MS5',  (*self.red, 1.),        (5,))]
         synapse_cl_labels = []
-        # for i in range(760):
-        #     class_name = 'Synapse' + str(i)
-        #     synapse_cl_labels += [Label(i+1, class_name, (*self.red, 1.))]
         synapse_cl_labels += [Label(1, 'Synapse', (*self.red, 1.))]
         # choose here if to do 2-way or 5-way regression-bin classification
         task_spec_cl_labels = synapse_cl_labels
@@ -247,18 +224,8 @@ class Configs(DefaultConfigs):
         #  Schedule / Selection / Optim #
         #################################
 
-        # self.num_epochs = 130 if self.dim == 2 else 200
         self.num_epochs = 130 if self.dim == 2 else 600
-        # self.num_epochs = 130 if self.dim == 2 else 1000
-        # self.num_train_batches = 200 if self.dim == 2 else 113    # 450
-        # self.num_train_batches = 200 if self.dim == 2 else 104     # 415 
-        # self.num_train_batches = 200 if self.dim == 2 else 156     # 415 hold_out True
-        # self.num_train_batches = 200 if self.dim == 2 else 506     # 2026
-        # self.num_train_batches = 200 if self.dim == 2 else 405       # 1620
-        self.num_train_batches = 200 if self.dim == 2 else 368      # 735
-        # self.num_train_batches = 200 if self.dim == 2 else 63    # 250
-        # self.num_train_batches = 200 if self.dim == 2 else 51     # 204
-        # self.num_train_batches = 200 if self.dim == 2 else 26    # 100
+        self.num_train_batches = 200 if self.dim == 2 else 368     
     
         self.batch_size = 4 if self.dim == 2 else 1
 
@@ -318,10 +285,8 @@ class Configs(DefaultConfigs):
         # wbc = weighted box clustering as in https://arxiv.org/pdf/1811.08661.pdf,
         # nms = standard non-maximum suppression, or None = no clustering
         self.clustering = 'wbc'
-        # self.clustering = 'nms'  ### changes here
         # iou thresh (exclusive!) for regarding two preds as concerning the same ROI
         self.clustering_iou = 0.2  # has to be larger than desired possible overlap iou of model predictions
-        # self.clustering_iou = 0.7  # changes here
 
         self.plot_prediction_histograms = True
         self.plot_stat_curves = False

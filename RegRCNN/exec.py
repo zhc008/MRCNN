@@ -214,74 +214,9 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset_name', type=str, default='toy',
                         help="path to the dataset-specific code in source_dir/datasets")
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_64_64_16_scale_shrink3',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_64_64_16_shrink3_larger_cluster',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_64_64_16_shrink3_03',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_64_64_16_shrink3_high_thresh',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_shrink3',
-                        # help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_shrink3',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_shrink3_fewer_anchors',
-                        # help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_shrink3_05_fewer_anchors',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_shrink3_05_fewer_anchors2',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_shrink3_05_fewer_anchors3',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_shrink3_edited_label',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_nms02_edited_label_GN',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_nms02_edited_label_IN',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms01_edited_label_GN',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms015_edited_label_GN',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_fliped_in_z',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_blacken',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_GN_shifted',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_GN_shifted4',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_shifted4',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_shifted4_cv',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_5shifted4',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_shifted4_pyramid2to3',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all_recur',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all_recur_combine',
-                        # help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_Rsc03_128_128_48_nms02_edited_GN_shifted4_all',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all_dense',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all_recur_combine_half',
-    #                     help='path to experiment dir. will be created if non existent.')
-    parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all_rotate2',
+    parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_shifted4',
                         help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_nms02_edited_label_GN_shifted4_pyramid234',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_50_conserv_shrink3',
-    #                     help='path to experiment dir. will be created if non existent.')
-    # parser.add_argument('--exp_dir', type=str, default='/cis/home/zchen163/my_documents/regrcnn_96_96_32_boundary_shrink3',
-    #                     help='path to experiment dir. will be created if non existent.')
+
     parser.add_argument('-m', '--mode', type=str,  default='train_test', help='one out of: create_exp, analysis, train, train_test, or test')
     parser.add_argument('-f', '--folds', nargs='+', type=int, default=None, help='None runs over all folds in CV. otherwise specify list of folds.')
     parser.add_argument('--server_env', default=False, action='store_true', help='change IO settings to deploy models on a cluster.')

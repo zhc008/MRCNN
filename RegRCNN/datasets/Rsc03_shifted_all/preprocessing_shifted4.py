@@ -70,26 +70,10 @@ def reindex_labels(im):
 # crop an image to 5 smaller ones
 def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
     # the size and stride of the crop
-    size = 128
-    depth = 48
-    stride = 128
-    z_stride = 48
-    # size = 64
-    # depth = 48
-    # stride = 20
-    # z_stride = 31
-    # size = 64
-    # depth = 48
-    # stride = 44
-    # z_stride = 31
-    # size = 64
-    # depth = 32
-    # stride = 44
-    # z_stride = 12
-    # size = 64
-    # depth = 16
-    # stride = 44
-    # z_stride = 6
+    size = 96
+    depth = 32
+    stride = 96
+    z_stride = 32
 
     # read the raw image in
     raw = skio.imread(raw_dir)
@@ -118,9 +102,7 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
             for z in range(0, zidth - depth + 1, z_stride):
                 if x == 0 or y == 0:
                     continue
-                # print(f"x: {x}")
-                # print(f"y: {y}")
-                # print(f"z: {z}")
+
                 raw_temp = np.copy(raw_t_cut)[y:y+size, x:x+size, z:z+depth]
                 label_temp = np.copy(label_t_cut)[y:y+size, x:x+size, z:z+depth]
                 raw_shifted1 = np.copy(raw_t_cut)[y:y+size, x+1:x+1+size, z:z+depth]
@@ -154,8 +136,7 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
                     label_shifted2 = edit_labels(label_shifted2)
                     label_shifted3 = edit_labels(label_shifted3)
                     label_shifted4 = edit_labels(label_shifted4)
-                # elif np.unique(label_temp).shape[0] > 380:
-                #     continue
+
                 print(f"raw_shape: {raw_temp.shape}")
                 print(f"label_shape: {label_temp.shape}")
                 skio.imsave(raw_save_dir + "/crop" + str(sub_index*5-4) + ".tif", arr = raw_temp) # save raw images
@@ -168,24 +149,14 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
                 skio.imsave(label_save_dir + "/crop" + str(sub_index*5-1) + ".tif", arr = label_shifted3) # save label shifted images
                 skio.imsave(raw_save_dir + "/crop" + str(sub_index*5) + ".tif", arr = raw_shifted4) # save raw shifted images
                 skio.imsave(label_save_dir + "/crop" + str(sub_index*5) + ".tif", arr = label_shifted4) # save label shifted images
-                # if sub_index > 450:
-                # if sub_index > 100:
-                #     break
+
                 del raw_temp, label_temp, raw_shifted1, label_shifted1, raw_shifted2, label_shifted2, raw_shifted3, label_shifted3, raw_shifted4, label_shifted4
                 sub_index += 1
-                # print(sub_index)
-    # count.sort()
-    # print(Counter(count).keys())
-    # print(Counter(count).values())
 
 def edit_labels(waterim):
     waterim=np.transpose(waterim,axes=[2,0,1])
-    # print(f"waterim.shape: {waterim.shape}")
-    
-    # if np.max(waterim)==0:
-    #     return waterim
+
     waterim=measure.label(waterim, connectivity=1) #due to the cutting of the large ilastik file to create training patches,some segs were cut up and are not unified anymore
-    # print(f"len(waterim): {len(waterim)}")
         
     #%% STEPS 1,3&4 TESTING DOING IT by slice instead, it's relatively fast on the small patches, less than one minute to run 100 patches, but much slower for the real sized images
     
@@ -236,7 +207,6 @@ def edit_labels(waterim):
     return waterim
 
 def preprocess_image(cf):
-    # crop_image(cf.before_crop_dir + "/rsc01_reg_XTC_t1.tif", cf.raw_data_dir, cf.before_crop_dir + "/rsc01_reg_XTC_t1_segmented.tif", cf.label_data_dir)
     raw_files = os.listdir(cf.raw_data_dir)
     file_number = len(raw_files)
     for i in range(file_number):
@@ -260,27 +230,19 @@ def create_dataframe(cf):
     pid = np.linspace(0,file_number-1, file_number)
     pid = pid[:,None].astype(int)
     df_data = np.concatenate((class_ids,pid), axis=1)
-    # class_targets = list(np.linspace(1,760,760).astype(int))
-    # class_targets = list([1])
     df = pd.DataFrame(df_data,columns=['class_ids', 'pid'])
     fg_slices = np.zeros((file_number, 1))
     df['fg_slices'] = fg_slices.astype(object)
     df['class_ids'] = df['class_ids'].astype(object)
     df['regression_vectors'] = ""
     df['undistorted_rg_vectors'] = ""
-    # for i in range(len(df['class_ids'])):
-    #     # set class_ids to a list of 1
-    #     df.at[i,'class_ids'] = class_targets
-        ## the black ones
-        # if i == 0 or i == len(df['class_ids'])-1:
-        #     df.at[i,'class_ids'] = []
 
     for i in range(file_number):
         file_name = 'crop' + str(i) + '.tif'
         label = skio.imread(os.path.join(cf.label_data_dir, file_name)).astype(np.uint32)
+        # set class_ids to a list of 1
         df.at[i,'class_ids'] = [1] * np.unique(label).shape[0]
         ## the black ones
-        # if i == 0 or i == len(df['class_ids'])-1:
         if np.unique(label).shape[0] == 1:
             df.at[i,'class_ids'] = []
         # set fg_slices

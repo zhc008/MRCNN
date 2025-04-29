@@ -209,7 +209,7 @@ if __name__=="__main__":
     args = Args()
 
     # reference file for histogram matching
-    reference = skio.imread("/cis/home/gcoste1/MaskReg/RSC08/rsc03im/RSc03_roi1_t1_XTC.tif")
+    # reference = skio.imread("/cis/home/gcoste1/MaskReg/RSC08/rsc03im/RSc03_roi1_t1_XTC.tif")
     # folder for temporarily storing patches
     sparse_buffer_dir ="/cis/home/gcoste1/MaskReg/MaskRegInference/InfPatchesStorage/" #GABY CHANGED for access PATCH STORAGE
     os.system(f'rm -rf {sparse_buffer_dir}*')
@@ -275,7 +275,6 @@ if __name__=="__main__":
     # generate a batch from test set and show results
     print(f"cuda device count: {torch.cuda.device_count()}")
     net = torch.nn.DataParallel(net1)
-    # net.to(f'cuda:{net.device_ids[0]}')
     net.to(device)
     net.eval()
 
@@ -314,14 +313,8 @@ if __name__=="__main__":
             with torch.set_grad_enabled(False):  # saves GPU RAM
                 input_name = examples[i]['input']
                 input_im = tiff.imread(input_name)
-                # input_im = input_im[:36,:281,:400]
-                # input_im = padding(input_im)
                 # reference = skio.imread("/cis/home/zchen163/my_documents/XTC_data/Rsc03_06/RSc03_XTC_histmatch_ROI.tif")
-
                 # input_im = match_histograms(input_im, reference) #GABY COMMENT OUT TO TEST RSC03 Trained MaskREg
-                print(f"input_im.shape: {input_im.shape}")
-                # print(input_im.dtype)
-                # print(max(np.unique(input_im)))
 
 
                 """ Analyze each block with offset in all directions """
@@ -330,7 +323,6 @@ if __name__=="__main__":
                 #max_im = plot_max(input_im, ax=0)
 
                 print('Starting inference on volume: ' + str(i) + ' of total: ' + str(len(examples)))
-                #plot_max(input_im)
 
 
                 overlap_percent = 0
@@ -338,9 +330,7 @@ if __name__=="__main__":
                 depth = 32
                 num_truth_class = 2
                 stride = 66 # 1024*1024*303 GABY STRIDE HERE
-                # stride = 51  # 300*300*180
                 z_stride = 15 # 1024*1024*303
-                # z_stride = 17 # 300*300*180
 
 
                 quad_size=input_size
@@ -361,8 +351,6 @@ if __name__=="__main__":
                 im_size = np.shape(input_im)
                 width = im_size[1];  height = im_size[2]; depth_im = im_size[0]
 
-                # segmentation_labelled = np.zeros([depth_im, width, height])
-                # print(segmentation.shape)
                 start_time = time.time()
 
                 segmentation = np.zeros([depth_im, width, height], dtype=np.int32)
@@ -372,23 +360,13 @@ if __name__=="__main__":
                 #%%
                 for im, coord in tqdm(test_dataloader, desc="patches",leave=False):
                     # im = torch.permute(im, (0,2,3,1))  # torch 1.4.0 doesn't have permute
-                    # print(f"coord:{coord}")
-                    # print(f"im.shape before:{im.shape}")
                     im = im[:,None,:,:,:]
-                    # print(f"im.shape:{im.shape}")
                     im = im.float().to(device)
                     _, _, _, detections, detection_masks = net.module.forward(im)
-                    # print(f"detections:{detections[0:3]}")
-                    # print(f"detection_masks:{detection_masks.size()}")
                     results_dict = net.module.get_results_modified(im.shape, detections, detection_masks, return_masks=True)
-                    # print(f"coord:{coord}")
-                    # z, y, x = coord
-                    # z, y, x = int(z), int(y), int(x)
 
                     seg_im = results_dict['masks'][np.newaxis, np.newaxis, :]
                     synapse_locs = results_dict['sparse']   # a list of tuples contains x y z coordinates
-                    # print(f"seg_im.shape:{seg_im.shape}")
-                    # print(f"synapse_locs:{len(synapse_locs)}")
                     for batch_ix in range(len(synapse_locs)):
                         current_batch = synapse_locs[batch_ix]
                         z, y, x = coord[0][batch_ix], coord[1][batch_ix], coord[2][batch_ix]
@@ -408,7 +386,6 @@ if __name__=="__main__":
 
                 multi_start_time = time.time()
 
-                # num_processes = 4*4*3  # 48 patches
                 num_processes = 64
                 if count < num_processes:
                     num_processes = count
@@ -425,7 +402,6 @@ if __name__=="__main__":
                 h, mins = divmod(mins, 60)
                 t = "{:d}h:{:02d}m:{:02d}s".format(int(h), int(mins), int(secs))
                 print("{} multiprocess runtime: {}".format(os.path.split(__file__)[1], t))
-                # sparse.save_npz("./sparse/all_synapses3.npz", all_synapses)
 
                 csr_masks = all_synapses.tocsr()
                 cleaned_masks = []
@@ -447,7 +423,6 @@ if __name__=="__main__":
                 labelled_im = measure.label(merged_im, connectivity=1)
                 labelled_im = np.asarray(labelled_im, dtype=np.uint32)
 
-            # segmentation = edit_labels(segmentation)
 
             filename = input_name.split('/')[-1].split('.')[0:-1]
             filename = '.'.join(filename)
