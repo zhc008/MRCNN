@@ -70,7 +70,7 @@ num_truth_class =
 stride = 
 z_stride = 
 ```
-Set the num_processes based on number of cpus for multiprocessing at line 389
+Set the num_processes based on the number of CPUs using for multiprocessing at line 389
 ```
 num_processes = 
 ```
