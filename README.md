@@ -23,7 +23,7 @@ python setup.py install
 ## Test case
 Run inference on a small 96x96x32 image in folder RSC02_roi3_GC
 ```
-python evaluate_inference_analysis_masks_small.py
+python ./new_inference_scripts/evaluate_inference_analysis_masks_small.py
 ```
 inference result will be under the RSC02_roi3_GC folder
 
@@ -38,7 +38,7 @@ python exec.py --mode train --dataset_name your_dataset --exp_dir path/to/experi
 For more detailed description, look at the README file in the RegRCNN folder.
 
 ## Run Inference file
-Open the script inference_sparse_parallel_GC.py  
+Open the script inference_sparse_parallel_GC.py in new_inference_scripts
 Change the dir of the training model folder in self.dataset_name, and the directory of the trained model in self.exp_dir at line 206-207  
 ```
 self.dataset_name = ""
