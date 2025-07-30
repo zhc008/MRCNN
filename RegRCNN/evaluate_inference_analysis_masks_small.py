@@ -23,258 +23,18 @@ import skimage.io as skio
 from skimage.measure import regionprops
 
 
-
-""" Tiger function """
-def plot_max(im, ax=0, plot=1):
-     max_im = np.amax(im, axis=ax)
-     if plot:
-         plt.figure(); plt.imshow(max_im)
-     
-     return max_im
-
-
-
-""" Tiger function """
-def boxes_to_mask(cf, results_dict, thresh, input_im, unique_id=0):
-
-    label_arr = np.copy(results_dict['seg_preds'],)
-    new_labels = np.zeros(np.shape(results_dict['seg_preds']))
-    class_labels = np.zeros(np.shape(results_dict['seg_preds']))
-    check_box = np.zeros(np.shape(results_dict['seg_preds']))
-    # print(np.unique(label_arr))
-    # print(label_arr.shape)
-    for box_id, box_row in enumerate(results_dict['boxes'][0]):
-        
-        print('box_score: ' + str(box_row['box_score']))
-        
-        
-        #if cf.dim == 2 and box_row['box_score'] < cf.merge_3D_iou:
-        #    continue
-        #else:
-            
-        if box_row['box_score'] >= thresh:
-                    
-            box_arr = np.zeros(np.shape(results_dict['seg_preds']))
-            bc = box_row['box_coords']
-            bc = np.asarray(bc, dtype=np.int)
-            
-            bc[np.where(bc < 0)[0]] = 0  ### cannot be negative
-            
-            ### also cannot be larger than image size
-            if cf.dim == 2:
-                bc[np.where(bc >= label_arr.shape[-1])[0]] = label_arr.shape[-1]
-
-                box_arr[bc[4]:bc[5], 0, bc[0]:bc[2], bc[1]:bc[3]] = box_id + 1    ### +1 because starts from 0
-                box_arr[label_arr == 0] = 0
-                
-                new_labels[box_arr > 0] = box_id + 1
-                
-                class_labels[box_arr > 0] = box_row['box_pred_class_id']
-
-            else:
-                bc[0:4][np.where(bc[0:4] >= label_arr.shape[-2])[0]] = label_arr.shape[-2]
-                
-                bc[4:6][np.where(bc[4:6] >= label_arr.shape[-1])[0]] = label_arr.shape[-1]
-                
-                box_arr[0, 0, bc[0]:bc[2], bc[1]:bc[3], bc[4]:bc[5],] = box_id + 1    ### +1 because starts from 0
-                # box_arr[0, 0, bc[0]:bc[2], bc[1]:bc[3], bc[4]:bc[5],][new_labels[0, 0, bc[0]:bc[2], bc[1]:bc[3], bc[4]:bc[5],
-                #                                                                  ] == 0] = box_id + 1    ### +1 because starts from 0
-                # check_box[box_arr > 0] = box_row['box_pred_class_id']
-                box_arr[label_arr == 0] = 0
-                # box_arr[input_im < 12] = 0 # added to avoid segmentation that includes background
-                new_labels[box_arr > 0] = box_id + 1
-
-                
-                class_labels[box_arr > 0] = box_row['box_pred_class_id']
-        
-        # added print statements
-        # print(label_arr.shape)
-        # print(class_labels.shape)
-                        
-    label_arr = new_labels
-    # np.save('/cis/home/zchen163/my_documents/debugging/check_box', np.squeeze(check_box))
-    
-    return label_arr, class_labels
-
-
-
-
-
-def find_pid_in_splits(pid, exp_dir=None):
-    if exp_dir is None:
-        exp_dir = cf.exp_dir
-    check_file = os.path.join(exp_dir, 'fold_ids.pickle')
-    with open(check_file, 'rb') as handle:
-        splits = pickle.load(handle)
-
-    finds = []
-    for i, split in enumerate(splits):
-        if pid in split:
-            finds.append(i)
-            print("Pid {} found in split {}".format(pid, i))
-    if not len(finds)==1:
-        raise Exception("pid {} found in more than one split: {}".format(pid, finds))
-    return finds[0]
-
-
-
-
-
-
-
-def plot_train_forward(slices=None):
-    with torch.no_grad():
-        batch = next(val_gen)
-        
-        results_dict = net.train_forward(batch, is_validation=True) #seg preds are int preds already
-        print(results_dict['seg_preds'].shape)
-        print(batch['data'].shape)
-        
-        
-        out_file = os.path.join(anal_dir, "straight_val_inference_fold_{}".format(str(cf.fold)))
-        #plg.view_batch(cf, batch, res_dict=results_dict, show_info=False, legend=True,
-        #                          out_file=out_file)#, slices=slices)
-
-        ### TIGER - SAVE AS TIFF
-        truth_im = np.expand_dims(batch['seg'], axis=0)
-        
-        
-        ### if 3D
-        #seg_im = np.moveaxis(results_dict['seg_preds'], -1, 1)    
-        import tifffile as tiff
-        tiff.imwrite(out_file + '_TRUTH.tif', np.asarray(truth_im, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-        
-                
-        seg_im = np.expand_dims(results_dict['seg_preds'], axis=0)
-        ### if 3D
-        #seg_im = np.moveaxis(results_dict['seg_preds'], -1, 1)    
-        import tifffile as tiff
-        tiff.imwrite(out_file + '_seg.tif', np.asarray(seg_im, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-        
-
-        input_im = np.expand_dims(batch['data'], axis=0)
-        
-        
-        ### if 3D
-        #input_im = np.moveaxis(batch['data'], -1, 1)
-        tiff.imwrite(out_file + '_input_im.tif', np.asarray(input_im, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-        
-
-        
-
-        ### TIGER ADDED
-        import utils.exp_utils as utils
-        print('Plotting output')
-        utils.split_off_process(plg.view_batch, cf, batch, results_dict, has_colorchannels=cf.has_colorchannels,
-                                show_gt_labels=True, get_time="val-example plot",
-                                out_file=os.path.join(cf.plot_dir, 'batch_example_val_{}.png'.format(cf.fold)))
-
-
-def plot_forward(pid, slices=None):
-    with torch.no_grad():
-        batch = batch_gen['test'].generate_train_batch(pid=pid)
-        results_dict = net.test_forward(batch) #seg preds are only seg_logits! need to take argmax.
-
-        if 'seg_preds' in results_dict.keys():
-            results_dict['seg_preds'] = np.argmax(results_dict['seg_preds'], axis=1)[:,np.newaxis]
-
-        out_file = os.path.join(anal_dir, "straight_inference_fold_{}_pid_{}".format(str(cf.fold), pid))
-        
-
-
-
-        print(results_dict['seg_preds'].shape)
-        print(batch['data'].shape)
-
-        ### TIGER - SAVE AS TIFF
-        truth_im = np.expand_dims(batch['seg'], axis=0)
-        
-        
-        ### if 3D
-        #seg_im = np.moveaxis(results_dict['seg_preds'], -1, 1)    
-        import tifffile as tiff
-        tiff.imwrite(out_file + '_TRUTH.tif', np.asarray(truth_im, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-        
-        
-
-        roi_mask = np.expand_dims(batch['roi_masks'][0], axis=0)
-        
-        
-        ### if 3D
-        #seg_im = np.moveaxis(results_dict['seg_preds'], -1, 1)    
-        import tifffile as tiff
-        tiff.imwrite(out_file + '_roi_mask.tif', np.asarray(roi_mask, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-                
-      
-
-    
-        seg_im = np.expand_dims(results_dict['seg_preds'], axis=0)
-        
-        
-        ### if 3D
-        #seg_im = np.moveaxis(results_dict['seg_preds'], -1, 1)    
-        import tifffile as tiff
-        tiff.imwrite(out_file + '_seg.tif', np.asarray(seg_im, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-        
-
-        input_im = np.expand_dims(batch['data'], axis=0)
-        
-        
-        ### if 3D
-        #input_im = np.moveaxis(batch['data'], -1, 1)
-        tiff.imwrite(out_file + '_input_im.tif', np.asarray(input_im, dtype=np.uint32),
-                      imagej=True,   metadata={'spacing': 1, 'unit': 'um', 'axes': 'TZCYX'})
-        
-
-
-        
-        ### This below hangs
-        
-        # plg.view_batch(cf, batch, res_dict=results_dict, show_info=False, legend=True, show_gt_labels=True,
-        #                           out_file=out_file, sample_picks=slices, has_colorchannels=False)
-        
-        print('Plotting output')
-        utils.split_off_process(plg.view_batch, cf, batch, results_dict, has_colorchannels=cf.has_colorchannels,
-                                show_gt_labels=True, get_time="val-example plot",
-                                out_file=os.path.join(cf.plot_dir, 'batch_SINGLE_PID_{}.png'.format(pid)))
-        
-        
-        
-        
-
-
-def plot_merged_boxes(results_list, pid, plot_mods=False, show_seg_ids="all", show_info=True, show_gt_boxes=True,
-                      s_picks=None, vol_slice_picks=None, score_thres=None):
-    """
-
-    :param results_list: holds (results_dict, pid)
-    :param pid:
-    :return:
-    """
-    results_dict = [res_dict for (res_dict, pid_) in results_list if pid_==pid][0]
-    #seg preds are discarded in predictor pipeline.
-    #del results_dict['seg_preds']
-
-    batch = batch_gen['test'].generate_train_batch(pid=pid)
-    out_file = os.path.join(anal_dir, "merged_boxes_fold_{}_pid_{}_thres_{}.png".format(str(cf.fold), pid, str(score_thres).replace(".","_")))
-
-    utils.save_obj({'res_dict':results_dict, 'batch':batch}, os.path.join(anal_dir, "bytes_merged_boxes_fold_{}_pid_{}".format(str(cf.fold), pid)))
-
-    plg.view_batch(cf, batch, res_dict=results_dict, show_info=show_info, legend=False, sample_picks=s_picks,
-                   show_seg_pred=True, show_seg_ids=show_seg_ids, show_gt_boxes=show_gt_boxes,
-                   box_score_thres=score_thres, vol_slice_picks=vol_slice_picks, show_gt_labels=True,
-                   plot_mods=plot_mods, out_file=out_file, has_colorchannels=cf.has_colorchannels, dpi=600)
-
-    return
-
-
 def padding(im, pad_size=8, axis=0):
+    """
+    Pads a 3D image array along a given axis with zeros.
+
+    Parameters:
+        im (ndarray): Input 3D image (shape: D x H x W).
+        pad_size (int): Amount of zero padding on each side.
+        axis (int): Axis to pad (default is 0, i.e., depth).
+
+    Returns:
+        ndarray: Zero-padded image.
+    """
     padded_size = im.shape[axis] + 2 * pad_size
     output = np.zeros((padded_size, im.shape[1], im.shape[2])).astype(im.dtype)
     output[pad_size:-pad_size,:,:] = im
@@ -282,6 +42,12 @@ def padding(im, pad_size=8, axis=0):
 
 
 def reindex_labels(im):
+    """
+    Reindexes labels to be consecutive integers starting from 1 to the number of labels.
+
+    Parameters:
+        im (ndarray): Label mask.
+    """
     labels = np.unique(im)
     for i in range(labels.shape[0]):
         im[im == labels[i]] = i
@@ -326,11 +92,6 @@ if __name__=="__main__":
     test_predictor = Predictor(cf, None, logger, mode='test')
     test_evaluator = Evaluator(cf, logger, mode='test')
     
-    
-    
-    cf.plot_dir = anal_dir ### TIGER ADDED FOR VAL_GEN
-    val_gen = data_loader.get_train_generators(cf, logger, data_statistics=False)['val_sampling']
-    
 
     """ TO LOAD OLD CHECKPOINT """
     # Read in file names
@@ -350,8 +111,6 @@ if __name__=="__main__":
     """ Find last checkpoint """       
     weight_path = onlyfiles_check[-1]   
     print(f'weight_path: {weight_path}')
-    
-    
 
     net = model.net(cf, logger).cuda(device)
     
@@ -371,11 +130,6 @@ if __name__=="__main__":
     plot_boxes = 0
     
     thresh_2D_to_3D_boxes = 0.5
-    
-    
-    from natsort import natsort_keygen, ns
-    natsort_key1 = natsort_keygen(key = lambda y: y.lower())      # natural sorting order
-    import glob, os
     
     #from csbdeep.internals import predict
     from tifffile import *
@@ -408,22 +162,8 @@ if __name__=="__main__":
             
         sav_dir = sav_dir + '/'
         
-        # Required to initialize all
-        batch_size = 1;
-        
-        batch_x = []; batch_y = [];
-        weights = [];
-        
-        plot_jaccard = [];
-        
-        output_stack = [];
-        output_stack_masked = [];
-        all_PPV = [];
-        input_im_stack = [];
         for i in range(len(examples)):
-             
-        
-            
+                 
             """ TRY INFERENCE WITH PATCH-BASED analysis from TORCHIO """
             with torch.set_grad_enabled(False):  # saves GPU RAM            
                 input_name = examples[i]['input']            
@@ -454,13 +194,13 @@ if __name__=="__main__":
                 cf.merge_3D_iou = thresh
                 
                 
-                im_size = np.shape(input_im);
-                width = im_size[1];  height = im_size[2]; depth_im = im_size[0];
+                im_size = np.shape(input_im)
+                width = im_size[1];  height = im_size[2]; depth_im = im_size[0]
                     
                 segmentation = np.zeros([depth_im, width, height])
                 segmentation_labelled = np.zeros([depth_im, width, height])
                 # print(segmentation.shape)
-                total_blocks = 0;
+                total_blocks = 0
                 all_xyz = [] 
                 num_masks = 0                                              
                 # k = 0
@@ -526,32 +266,10 @@ if __name__=="__main__":
                                 #input_im = np.expand_dims(batch['data'], axis=0)
                                 truth_im = np.expand_dims(batch['seg'], axis=0)
                                 seg_im = np.expand_dims(results_dict['seg_preds'], axis=0)
-                                
-                                
-                                """ roi_mask means we dont need bounding boxes!!! 
-                                
-                                        - if there are NO objects in this image, then will have a weird shape, so need to parse it by len()
-                                        - otherwise, it is a list of lists (1 list for each slice, which contains arrays for every object on that slice)
-                                """
+                            
                                 if len(np.unique(seg_im)) == 1:
                                     continue   ### no objects found (only 0 - background)
-                                        
-                                    
-                                elif cf.merge_2D_to_3D_preds:
-                                    """ NEED MORE WORK IF WANT TO CONVERT 2D to 3D"""
-                                    
-                                    print('merge 2D to 3D with iou thresh of: ' + str(cf.merge_3D_iou))
-                                    
-                                    import predictor as pred
-                                    results_2to3D = {}
-                                    results_2to3D['2D_boxes'] = results_dict['boxes']
-                                    merge_dims_inputs = [results_dict['boxes'], 'dummy_pid', cf.class_dict, cf.merge_3D_iou]
-                                    results_2to3D['boxes'] = pred.apply_2d_3d_merging_to_patient(merge_dims_inputs)[0]
-                                    
-                
-                                    label_arr, class_labels = boxes_to_mask(cf, results_dict=results_2to3D, thresh=cf.merge_3D_iou, input_im=quad_intensity)
-                                    
-                                    
+                            
                                 class_labels = np.asarray(class_labels, dtype=np.uint32)
                                     
                                 class_labels = np.expand_dims(class_labels, axis=0)
@@ -562,12 +280,6 @@ if __name__=="__main__":
                                 truth_im = np.moveaxis(batch['seg'], -1, 1) 
 
                                 
-                                
-                                """ roi_mask means we dont need bounding boxes!!! 
-                                
-                                        - if there are NO objects in this image, then will have a weird shape, so need to parse it by len()
-                                        - otherwise, it is a list of lists (1 list for each slice, which contains arrays for every object on that slice)
-                                """
                                 patch_counter += 1
 
                                 if len(np.unique(seg_im)) == 1:

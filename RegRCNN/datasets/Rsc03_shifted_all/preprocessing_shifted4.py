@@ -61,14 +61,29 @@ def resample_array(src_imgs, src_spacing, target_spacing):
 
     return resampled_img
 
-# make all the labels in the image to be labelled from 1 to number of labels
 def reindex_labels(im):
+    """
+    Reindexes labels to be consecutive integers starting from 1 to the number of labels.
+
+    Parameters:
+        im (ndarray): Label mask.
+    """
     labels = np.unique(im)
     for i in range(labels.shape[0]):
         im[im == labels[i]] = i
 
-# crop an image to 5 smaller ones
+
 def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
+    """
+    Crops a large raw + label 3D image into smaller overlapping patches and optionally
+    perturbs them spatially (shifts). Saves black filler crops every 10th step.
+
+    Parameters:
+        raw_dir (str): Path to raw TIFF volume.
+        raw_save_dir (str): Directory to save cropped raw patches.
+        label_dir (str): Path to label TIFF volume.
+        label_save_dir (str): Directory to save cropped label patches.
+    """
     # the size and stride of the crop
     size = 96
     depth = 32
@@ -79,7 +94,7 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
     raw = skio.imread(raw_dir)
     raw_t = raw.transpose((1,2,0)) # transpose the image to fit the model
     print(f"raw_t.shape: {raw_t.shape}")
-    raw_t_cut = raw_t[:,:,10:160] # use only slice 10-160 for density
+    raw_t_cut = raw_t[:,:,10:160] # use only slice 10-160 for density of ROIs
     # read the labelled image in
     label = skio.imread(label_dir)
     label_t = label.transpose((1,2,0))
@@ -102,7 +117,8 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
             for z in range(0, zidth - depth + 1, z_stride):
                 if x == 0 or y == 0:
                     continue
-
+                
+                # create shifted versions for augmentation
                 raw_temp = np.copy(raw_t_cut)[y:y+size, x:x+size, z:z+depth]
                 label_temp = np.copy(label_t_cut)[y:y+size, x:x+size, z:z+depth]
                 raw_shifted1 = np.copy(raw_t_cut)[y:y+size, x+1:x+1+size, z:z+depth]
@@ -114,6 +130,7 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
                 raw_shifted4 = np.copy(raw_t_cut)[y-1:y-1+size, x:x+size, z:z+depth]
                 label_shifted4 = np.copy(label_t_cut)[y-1:y-1+size, x:x+size, z:z+depth]
 
+                # generate dummy background block 
                 if sub_index%10 == 0:
                     raw_temp[raw_temp > 0] = 0
                     raw_temp[raw_temp < 0] = 0
@@ -154,6 +171,19 @@ def crop_image(raw_dir, raw_save_dir, label_dir, label_save_dir):
                 sub_index += 1
 
 def edit_labels(waterim):
+    """
+    Cleans and relabels 3D segmentation masks by:
+    - Removing small components (<=3 pixels in area).
+    - Removing linear segments (eccentricity == 1).
+    - Removing components that span fewer than 3 z-planes.
+    - Relabeling the mask with connectivity=1.
+
+    Parameters:
+        waterim (ndarray): 3D segmentation mask.
+
+    Returns:
+        ndarray: Cleaned and relabeled 3D masks.
+    """
     waterim=np.transpose(waterim,axes=[2,0,1])
 
     waterim=measure.label(waterim, connectivity=1) #due to the cutting of the large ilastik file to create training patches,some segs were cut up and are not unified anymore
@@ -169,7 +199,7 @@ def edit_labels(waterim):
             continue
         zprops = pd.DataFrame(measure.regionprops_table(zim, properties=('label', 'area','coords','eccentricity')))
         
-        #Replacing step 1 and combining with step 3 
+        #Remove small components and those that span less than 3 z-planes
         smallsegs = zprops['coords'][zprops['area'] <= 3].copy()
     
         for co in smallsegs:
@@ -207,6 +237,12 @@ def edit_labels(waterim):
     return waterim
 
 def preprocess_image(cf):
+    """
+    Loads cropped TIFF images (raw + labels) and saves them as .npy for training.
+
+    Parameters:
+        cf (object): Config object containing raw_data_dir, label_data_dir, and pp_dir.
+    """
     raw_files = os.listdir(cf.raw_data_dir)
     file_number = len(raw_files)
     for i in range(file_number):
@@ -224,6 +260,15 @@ def preprocess_image(cf):
         np.save(out_path_seg, label)
 
 def create_dataframe(cf):
+    """
+    Create and save a Pandas dataframe with per-image metadata for training, including:
+    - class_ids (one per label)
+    - foreground slices
+    - placeholders for regression vectors
+
+    Parameters:
+        cf (object): Config object with label_data_dir and pp_dir.
+    """
     label_files = os.listdir(cf.label_data_dir)
     file_number = len(label_files)
     class_ids = np.array(np.ones(((file_number,1)))).astype(int)
@@ -254,6 +299,13 @@ def create_dataframe(cf):
 
 
 def convert_copy_npz(cf):
+    """
+    Converts a directory of .npy files into npz format using dmanager and copies them,
+    excluding the raw .npy files.
+
+    Parameters:
+        cf (object): Config object with pp_dir.
+    """
     npz_dir = os.path.join(cf.pp_dir+'_npz')
     print("converting to npz dir", npz_dir)
     os.makedirs(npz_dir, exist_ok=True)

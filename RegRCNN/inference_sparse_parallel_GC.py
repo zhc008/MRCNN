@@ -32,6 +32,19 @@ from scipy.sparse.csgraph import connected_components
 
 
 def edit_labels(waterim):
+    """
+    Cleans and relabels 3D segmentation masks by:
+    - Removing small components (<=3 pixels in area).
+    - Removing linear segments (eccentricity == 1).
+    - Removing components that span fewer than 3 z-planes.
+    - Relabeling the mask with connectivity=1.
+
+    Parameters:
+        waterim (ndarray): 3D segmentation mask.
+
+    Returns:
+        ndarray: Cleaned and relabeled 3D masks.
+    """
     if np.max(waterim)==0:
         return waterim
 
@@ -54,7 +67,7 @@ def edit_labels(waterim):
             continue
         zprops = pd.DataFrame(measure.regionprops_table(zim, properties=('label', 'area','coords','eccentricity')))
 
-        #Replacing step 1 and combining with step 3
+        #Remove small components and those that span less than 3 z-planes
         smallsegs = zprops['coords'][zprops['area'] <= 3].copy()
 
         for co in smallsegs:
@@ -96,6 +109,17 @@ def edit_labels(waterim):
     return waterim
 
 def parallel_sparse(chunk, width=1024,height=1024,depth_im=303, chunk_size=76):
+    """
+    Loads patch-based sparse masks and assembles them into a large sparse matrix for a chunk.
+
+    Parameters:
+        chunk (int): Chunk index.
+        width, height, depth_im (int): Dimensions of full volume.
+        chunk_size (int): Number of patches in each chunk.
+
+    Returns:
+        coo_matrix: Sparse matrix containing all synapse voxels from the chunk.
+    """
     patches = np.array(np.arange(chunk*chunk_size,chunk*chunk_size+chunk_size))
     all_synapses = None
     for i in patches:
@@ -120,6 +144,16 @@ def parallel_sparse(chunk, width=1024,height=1024,depth_im=303, chunk_size=76):
     return all_synapses
 
 class InferenceDataset(Dataset):
+    """
+    Torch Dataset for dividing a 3D volume into overlapping patches along x, y, z axes.
+
+    Args:
+        input_im (ndarray): 3D input image.
+        stride (int): Step size in x and y.
+        z_stride (int): Step size in z.
+        quad_size (int): Patch size in x/y.
+        quad_depth (int): Patch size in z.
+    """
     def __init__(self, input_im, stride, z_stride, quad_size, quad_depth):
         self.im = input_im
         depth_im, width, height = input_im.shape
@@ -161,6 +195,7 @@ class InferenceDataset(Dataset):
     def __getitem__(self, idx):
         z_len = len(self.zs)
         y_len = len(self.ys)
+        # map 1d indices to 3d
         z = self.zs[idx%z_len]
         y = self.ys[int(np.floor(idx/z_len))%y_len]
         x = self.xs[int(np.floor(idx / (y_len * z_len)))]
@@ -170,13 +205,26 @@ class InferenceDataset(Dataset):
         return image, coord
 
 def resolve_overlaps(csr_masks,size_threshold=20):
+    """
+    Resolves overlapping binary masks by identifying connected components and 
+    retaining only the largest segment in each overlap group, unless overlap is small.
+
+    Parameters:
+        csr_masks (csr_matrix): Sparse mask matrix (voxels x instances).
+        size_threshold (int): Threshold to ignore small overlaps.
+
+    Returns:
+        tuple:
+            - List of largest retained instance indices.
+            - List of removed smaller overlaps.
+    """
     mask_sizes = csr_masks.sum(axis=0).A1
     overlap_matrix = csr_masks.transpose().dot(csr_masks)
     overlap_matrix.setdiag(0)
     # full_mask = np.ones(len(coo_masks.data), dtype=bool)
     largest_in_overlaps = []
     smaller_overlaps = []
-    # find connected components
+    # find connected components to identify overlapping ROIs
     n_components, labels = connected_components(csgraph=overlap_matrix, directed=False)
     for component_label in tqdm(np.unique(labels), desc="Processing components", leave=False):
         component_indices = np.where(labels == component_label)[0]
@@ -194,6 +242,15 @@ def resolve_overlaps(csr_masks,size_threshold=20):
 
 # give each column an unique value
 def unique_col(csr_masks):
+    """
+    Assigns a unique integer label to each column (instance) in a sparse mask matrix.
+
+    Parameters:
+        csr_masks (csr_matrix): Sparse binary mask matrix.
+
+    Returns:
+        csr_matrix: Mask with unique integer values per column.
+    """
     column_indices = np.arange(csr_masks.shape[1])
     diagonal_matrix = diags(column_indices)
     return csr_masks.dot(diagonal_matrix)
@@ -214,6 +271,7 @@ if __name__=="__main__":
     sparse_buffer_dir ="/cis/home/gcoste1/MaskReg/MaskRegInference/InfPatchesStorage/" #GABY CHANGED for access PATCH STORAGE
     os.system(f'rm -rf {sparse_buffer_dir}*')
 
+    # import the configuration file
     config_file = utils.import_module('cf', os.path.join(args.exp_dir, "configs.py"))
     cf = config_file.Configs()
     cf.exp_dir = args.exp_dir
@@ -255,10 +313,8 @@ if __name__=="__main__":
 
     # print(onlyfiles_check)
     """ Find last checkpoint """
-    weight_path = onlyfiles_check[-1]   ### ONLY SOME CHECKPOINTS WORK FOR SOME REASON???
+    weight_path = onlyfiles_check[-1]
     print(f'weight_path: {weight_path}')
-
-    """^^^ WHY DO ONLY SOME CHECKPOINTS WORK??? """
 
     # net = model.net(cf, logger).cuda(device)
     net1 = model.net(cf, logger)
@@ -358,6 +414,7 @@ if __name__=="__main__":
                 all_synapses = None
                 count = 0
                 #%%
+                # Run inference on all patches and store detected synapse locations
                 for im, coord in tqdm(test_dataloader, desc="patches",leave=False):
                     # im = torch.permute(im, (0,2,3,1))  # torch 1.4.0 doesn't have permute
                     im = im[:,None,:,:,:]
@@ -385,7 +442,8 @@ if __name__=="__main__":
                 print("{} patch segmentation runtime: {}".format(os.path.split(__file__)[1], t))
 
                 multi_start_time = time.time()
-
+                
+                # number of CPU processes to use
                 num_processes = 64
                 if count < num_processes:
                     num_processes = count
@@ -403,6 +461,7 @@ if __name__=="__main__":
                 t = "{:d}h:{:02d}m:{:02d}s".format(int(h), int(mins), int(secs))
                 print("{} multiprocess runtime: {}".format(os.path.split(__file__)[1], t))
 
+                # Iteratively resolve overlapping masks to remove duplicate detections.
                 csr_masks = all_synapses.tocsr()
                 cleaned_masks = []
                 largest_in_overlaps, smaller_overlaps = resolve_overlaps(csr_masks, size_threshold=10) # first round
@@ -423,10 +482,11 @@ if __name__=="__main__":
                 labelled_im = measure.label(merged_im, connectivity=1)
                 labelled_im = np.asarray(labelled_im, dtype=np.uint32)
 
+            labelled_im = edit_labels(labelled_im)
 
             filename = input_name.split('/')[-1].split('.')[0:-1]
             filename = '.'.join(filename)
-
+            # save final result
             tiff.imwrite(sav_dir + filename + '_' + str(int(i)) +'_segmentation.tif', labelled_im)
 
             params = params.append(dict(zip(params.columns, [filename, labelled_im.shape, stride, z_stride, args.exp_dir])), ignore_index = True) #GABY added
