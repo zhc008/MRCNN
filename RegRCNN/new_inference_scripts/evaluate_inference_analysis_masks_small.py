@@ -56,8 +56,8 @@ def reindex_labels(im):
 if __name__=="__main__":
     class Args():
         def __init__(self):
-            self.dataset_name = "datasets/Rsc03_shifted_all"
-            self.exp_dir = "../regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all"   
+            self.dataset_name = "../datasets/Rsc03_shifted_all"
+            self.exp_dir = "../../regrcnn_Rsc03_96_96_32_nms02_edited_GN_shifted4_all"   
 
             self.server_env = False
     args = Args()
@@ -137,7 +137,7 @@ if __name__=="__main__":
     from tkinter import filedialog
         
     """ Select multiple folders for analysis AND creates new subfolder for results output """ 
-    list_folder = ["../RSC02_roi3_GC"]
+    list_folder = ["../../RSC02_roi3_GC"]
 
     """ Loop through all the folders and do the analysis!!!"""
     for input_path in list_folder:
